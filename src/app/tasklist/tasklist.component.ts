@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './tasklist.component.html',
   styleUrls: ['./tasklist.component.css']
 })
-export class TasklistComponent {
 
-}
+  export class TasklistComponent {
+
+  }
