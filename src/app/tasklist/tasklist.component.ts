@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasklist.component.css']
 })
 
-  export class TasklistComponent {
-
-  }
+  export class TasklistComponent {}

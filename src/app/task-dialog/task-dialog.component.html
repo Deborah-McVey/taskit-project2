@@ -1,0 +1,43 @@
+<div>
+  <h2 mat-dialog-title class="dialog-title">Add a New Task</h2>
+  <div>
+<button mat-icon-button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onNoClick()"></button>
+</div>
+</div>
+
+<mat-form-field>
+  <mat-label>Title</mat-label>
+  <input matInput cdkFocusInitial [(ngModel)]="data.task.title">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Description</mat-label>
+  <textarea matInput [(ngModel)]="data.task.description"></textarea>
+</mat-form-field>
+
+<mat-form-field>
+  <input type="date" placeholder="Due Date" matInput [(ngModel)]="data.date">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Priority</mat-label>
+    <select name="priority" id="priority" placeholder="Priority" [(ngModel)]="data.priority" required>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+  </select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Status</mat-label>
+  <select name="status" id="status" placeholder="Status" [(ngModel)]="data.status" required>
+    <option>To Do</option>
+    <option>In Progress</option>
+    <option>Completed</option>
+  </select>
+</mat-form-field>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" [mat-dialog-close]="data.title">Cancel</button>
+  <button mat-button (click)="create()" cdkFocusInitial>Create</button>
+</div>
