@@ -1,8 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Task } from '../add-task/task';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { Task } from '../add-task/task.model';
 
 @Component({
   selector: 'app-task-dialog',
@@ -10,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
   styleUrls: ['./task-dialog.component.css'],
 })
 export class TaskDialogComponent {
+
   private backupTask: Partial<Task> = { ...this.data.task };
 
   constructor(
@@ -23,8 +22,20 @@ export class TaskDialogComponent {
     this.dialogRef.close(this.data);
   }
 
+  onNoClick(): void {
+
+  }
+
+  create() {
+    throw new Error('Method not implemented.');
+    }
 }
+
 export interface TaskDialogData {
+title: any;
+date: any;
+priority: any;
+status: any;
   task: Partial<Task>;
   enableDelete: boolean;
 }

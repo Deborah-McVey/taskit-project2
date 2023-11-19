@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Task } from '../add-task/task';
+import { Task } from '../add-task/task.model';
 import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
 import { MatDialog } from '@angular/material/dialog';
 import { TaskDialogComponent, TaskDialogResult } from '../task-dialog/task-dialog.component';

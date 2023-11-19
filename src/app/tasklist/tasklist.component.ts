@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-tasklist',
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasklist.component.css']
 })
 
-  export class TasklistComponent {}
+@Injectable({
+  providedIn: "root"
+})
+
+  export class TasklistComponent {
+
+  }
